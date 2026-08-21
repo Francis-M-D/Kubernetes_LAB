@@ -43,31 +43,31 @@ The Kubernetes cluster is initialized using `kubeadm` and uses `containerd` as t
                     +---------------+---------------+
                     |                               |
                     |          AWS VPC              |
-                    |       172.31.0.0/16            |
+                    |       172.31.0.0/16           |
                     |                               |
                     |       Public Subnet           |
-                    |       172.31.1.0/24            |
+                    |       172.31.1.0/24           |
                     |                               |
                     |   +-----------------------+   |
                     |   |    Control Plane      |   |
-                    |   |      t3.medium        |   |
+                    |   |       t3.small        |   |
                     |   |                       |   |
                     |   |  kube-apiserver       |   |
-                    |   |  etcd                  |   |
-                    |   |  scheduler             |   |
-                    |   |  controller-manager    |   |
+                    |   |  etcd                 |   |
+                    |   |  scheduler            |   |
+                    |   |  controller-manager   |   |
                     |   +-----------+-----------+   |
                     |               |               |
-                    |               | Kubernetes     |
-                    |               | Cluster        |
-                    |               | Network        |
+                    |               | Kubernetes    |
+                    |               | Cluster       |
+                    |               | Network       |
                     |        +------+-------+       |
                     |        |              |       |
                     |        v              v       |
-                    |   +---------+    +---------+  |
-                    |   | Worker 1|    | Worker 2|  |
-                    |   |t3.medium|    |t3.medium|  |
-                    |   +---------+    +---------+  |
+                    |   +----------+  +----------+  |
+                    |   | Worker 1 |  | Worker 2 |  |
+                    |   | t3.small |  | t3.small |  |
+                    |   +----------+  +----------+  |
                     |                               |
                     +-------------------------------+
 ```
